@@ -1,0 +1,6 @@
+**/*.zip
+node_modules/
+version.json
+dist/
+/.vscode
+gulp/config/ftp.js

@@ -1,0 +1,106 @@
+@use 'sass:math';
+
+//! <Подключение миксинов>
+@import './base/mixins.scss';
+//! </Подключение миксинов>
+
+//! <Подключение шрифтов>
+// &display=swap
+@import url('');
+@import './base/fonts.scss';
+//! </Подключение шрифтов>
+
+//! <Иконочные шрифты>
+@import './fonts/icons.scss';
+//! </Иконочные шрифты>
+
+//! <Переменные>
+@import './base/variables.scss';
+//! </Переменные>
+
+//! <Обнуление, сетка>
+@import './base/null.scss';
+
+body {
+    //* Скролл заблокирован
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+    }
+    //* Сайт загружен
+    .loaded & {
+    }
+}
+//! </Обнуление, сетка>
+
+//! <Оболочка>
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // Прижимаем footer
+    > main {
+        flex: 1 1 auto;
+    }
+    // Фикс для слайдеров
+    > * {
+        min-width: 0;
+    }
+}
+//! </Оболочка>
+
+//! <Стили будут применяться ко всем классам содержащим *__container>
+@if ($responsiveType==1) {
+    //* Отзывчивая
+    [class*='__container'] {
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+            margin: 0 auto;
+        }
+        @if ($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+        }
+    }
+} @else {
+    //* По брейк-поинтам
+    [class*='__container'] {
+        margin: 0 auto;
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+        } @else {
+            @if ($containerPadding>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+        @media (max-width: $pc) {
+            max-width: rem(970);
+        }
+        @media (max-width: $tablet) {
+            max-width: rem(750);
+        }
+        @media (max-width: $mobile) {
+            max-width: none;
+            @if ($containerPadding>0 and $maxWidthContainer>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+    }
+}
+//! </Стили будут применяться ко всем классам содержащим *__container>
+
+//! <Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов>
+@import 'base.scss';
+
+//? Подключение стилей общих элементов проекта
+@import 'common.scss';
+
+//? Подключение стилей отдельных блоков
+@import 'blocks/header.scss';
+@import 'blocks/footer.scss';
+
+//? Подключение стилей отдельных страниц
+@import 'home.scss';
+//! </Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов>
