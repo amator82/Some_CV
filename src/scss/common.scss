@@ -1,0 +1,27 @@
+.title {
+    &__label {
+        display: flex;
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: math.div(24, 12);
+        letter-spacing: em(7.5, 12);
+        color: $cinder;
+        align-items: center;
+        gap: rem(16);
+        &::before {
+            content: '';
+            width: rem(16);
+            height: rem(2);
+            background-color: #d9d9d9;
+        }
+        &:not(:last-child) {
+            margin-bottom: em(9, 12);
+        }
+    }
+    &__value {
+        font-family: $Jakarta;
+        font-weight: 700;
+        font-size: rem(36);
+        line-height: math.div(45, 36);
+    }
+}
