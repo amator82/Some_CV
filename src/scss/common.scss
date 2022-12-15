@@ -39,6 +39,11 @@
 }
 .text {
     line-height: math.div(32, 16);
+    p {
+        &:not(:last-child) {
+            margin-bottom: rem(15);
+        }
+    }
 }
 .social {
     display: flex;
