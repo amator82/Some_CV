@@ -42,6 +42,12 @@
                 border: 1px solid $purpleColor;
             }
         }
+        @media (max-width: $mobile) {
+            padding: rem(10) rem(15);
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+            color: #fff;
+        }
     }
 }
 .menu {
@@ -50,13 +56,31 @@
     &__body {
         @media (max-width: $mobile) {
             position: fixed;
+            transition: left 0.3s ease 0s;
             top: 0;
-            left: 0;
+            left: -100%;
             width: 100%;
             height: 100%;
             overflow: auto;
             background-color: $purpleColor;
             padding: rem(90) rem(15) rem(30) rem(15);
+            &::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                transition: all 0.3s ease 0s;
+                right: -100%;
+                width: 100%;
+                height: rem(60);
+                background-color: #a29afa;
+                z-index: 2;
+            }
+            .menu-open & {
+                left: 0;
+                &::before {
+                    right: 0;
+                }
+            }
         }
     }
     &__list {
