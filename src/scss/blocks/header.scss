@@ -5,6 +5,8 @@
     left: 0;
     z-index: 100;
     &__container {
+        padding-bottom: rem(5);
+        padding-top: rem(5);
         display: flex;
         align-items: center;
         justify-content: space-between;
