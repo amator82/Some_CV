@@ -1,0 +1,43 @@
+.main-section {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100%;
+        align-items: center;
+    }
+    &__content {
+    }
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: rem(40);
+        }
+    }
+    &__social {
+    }
+    &__decor {
+    }
+    &__image {
+    }
+}
+.decor-main-section {
+    //? Два варианта прибить картинку к правому краю
+    // margin: rem(0) rem(0) rem(0) auto;
+    justify-self: end;
+    max-width: rem(336);
+    width: 100%;
+    &__image {
+        position: relative;
+        padding-bottom: percent(400, 336);
+    }
+    &__picture {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+    }
+}
