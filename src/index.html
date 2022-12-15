@@ -4,6 +4,27 @@
         <div class="wrapper">
             @@include('html/header.html', {})
             <main class="page">
+                <section class="page__main main-section">
+                    <div class="main-section__container">
+                        <div class="main-section__content">
+                            <div class="main-section__title title">
+                                <div class="title__label">MY NAME IS</div>
+                                <h1 class="title__value title__value_big">
+                                    Alex <span> Smith.</span>
+                                </h1>
+                            </div>
+                            <div class="main-section__text text">
+                                Creative front-end developer with more than +5
+                                years of experience in enterprise companies and
+                                startups. Proficient in JavaScript, Angular, and
+                                React. Passionate about UI/UX
+                            </div>
+                        </div>
+                        <div class="main-section__image">
+                            <img src="@img/main/person.png" alt="Person" />
+                        </div>
+                    </div>
+                </section>
                 @@include('html/footer.html', {})
             </main>
             @@include('html/js.html', {})
