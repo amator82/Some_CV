@@ -2,7 +2,6 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        min-height: 100%;
         align-items: center;
         padding-top: rem(80);
         padding-bottom: rem(30);
