@@ -40,6 +40,8 @@ import * as mtrForms from './files/forms/forms.js'
 /* Модуль работы с select. */
 // import './libs/select.js'
 
+import './libs/fullpage.js'
+
 /* Модуль работы с ползунком */
 // import "./files/forms/range.js";
 
