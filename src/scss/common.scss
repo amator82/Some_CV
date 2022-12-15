@@ -40,3 +40,19 @@
 .text {
     line-height: math.div(32, 16);
 }
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: rem(5);
+    @include adaptiveValue('column-gap', 34, 15);
+    &__link {
+        font-size: rem(22);
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $purpleColor;
+            }
+        }
+    }
+}
