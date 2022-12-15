@@ -4,17 +4,24 @@
         grid-template-columns: repeat(2, 1fr);
         min-height: 100%;
         align-items: center;
+        padding-top: rem(80);
+        padding-bottom: rem(30);
+        column-gap: rem(20);
+        @media (max-width: $mobile) {
+            grid-template-columns: auto;
+            row-gap: rem(30);
+        }
     }
     &__content {
     }
     &__title {
         &:not(:last-child) {
-            margin-bottom: rem(32);
+            @include adaptiveValue('margin-bottom', 32, 16);
         }
     }
     &__text {
         &:not(:last-child) {
-            margin-bottom: rem(40);
+            @include adaptiveValue('margin-bottom', 40, 20);
         }
     }
     &__social {
@@ -25,11 +32,19 @@
     }
 }
 .decor-main-section {
-    //? Два варианта прибить картинку к правому краю
-    // margin: rem(0) rem(0) rem(0) auto;
-    justify-self: end;
     max-width: rem(336);
-    width: 100%;
+    margin: 0 rem(22);
+    justify-self: center;
+    @media (min-width: $mobile) {
+        width: 100%;
+        //? Два варианта прибить картинку к правому краю
+        // margin: rem(0) rem(0) rem(0) auto;
+        justify-self: end;
+    }
+    @media (max-width: $mobile) {
+        max-width: none;
+        @include adaptiveValue('width', 336, 246);
+    }
     &__box {
         position: relative;
         padding-bottom: percent(400, 336);
