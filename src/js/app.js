@@ -8,7 +8,7 @@ mtrFunctions.isWebp()
 /* Добавление loaded для HTML после полной загрузки страницы */
 // mtrFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
-// mtrFunctions.menuInit();
+mtrFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // mtrFunctions.fullVHfix();
 
