@@ -177,6 +177,12 @@
                 background-color: #d9d3fb;
             }
         }
+        &.swiper-button-disabled {
+            opacity: 0.5;
+            cursor: default;
+            background-color: #eae6fe;
+            color: $purpleColor;
+        }
         &_prev {
             transform: rotate(-180deg);
         }
@@ -196,7 +202,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     &__image-ibg {
         overflow: hidden;
         opacity: 0.5;
