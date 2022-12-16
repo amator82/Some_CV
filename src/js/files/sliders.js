@@ -1,54 +1,18 @@
 import Swiper, { Navigation } from 'swiper'
 
 function initSliders() {
-    if (document.querySelector('.swiper')) {
-        new Swiper('.swiper', {
+    if (document.querySelector('.works__slider')) {
+        new Swiper('.works__slider', {
             modules: [Navigation],
             observer: true,
             observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            autoHeight: true,
+            slidesPerView: 3,
+            spaceBetween: 56,
             speed: 800,
-
-            //touchRatio: 0,
-            //simulateTouch: false,
-            //loop: true,
-            //preloadImages: false,
-            //lazy: true,
-
-            /*
-			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-            // Пагинация
-            /*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-            // Скроллбар
-            /*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-            // Кнопки "влево/вправо"
             navigation: {
-                prevEl: '.swiper-button-prev',
-                nextEl: '.swiper-button-next'
+                prevEl: '.works__arrow_prev',
+                nextEl: '.works__arrow_next'
             },
-
-            // Брейкпоинты
             /*
 			breakpoints: {
 				320: {
@@ -70,7 +34,6 @@ function initSliders() {
 				},
 			},
 			*/
-            // События
             on: {}
         })
     }

@@ -49,7 +49,7 @@ import './libs/fullpage.js'
 // import "./files/tippy.js";
 
 // Работа со слайдером (Swiper)
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 // Функции работы скроллом
 import * as mtrScroll from './files/scroll/scroll.js'
