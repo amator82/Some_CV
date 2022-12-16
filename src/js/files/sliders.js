@@ -13,27 +13,25 @@ function initSliders() {
                 prevEl: '.works__arrow_prev',
                 nextEl: '.works__arrow_next'
             },
-            /*
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                    autoHeight: true
+                },
+                650: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 56
+                }
+            },
             on: {}
         })
     }
