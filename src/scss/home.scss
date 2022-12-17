@@ -156,6 +156,10 @@
         align-items: center;
         justify-content: space-between;
         @include adaptiveValue('margin-bottom', 144, 30);
+        @media (max-width: em(600)) {
+            align-items: stretch;
+            flex-direction: column;
+        }
     }
     &__title {
     }
@@ -163,6 +167,9 @@
         display: flex;
         align-items: center;
         gap: rem(16);
+        @media (max-width: em(600)) {
+            justify-content: center;
+        }
     }
     &__arrow {
         width: rem(40);
@@ -190,6 +197,10 @@
         }
     }
     &__slider {
+        @media (max-width: em(650)) {
+            margin-right: rem(-15);
+            padding-right: rem(15);
+        }
     }
     &__wrapper {
     }
@@ -202,7 +213,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    // min-height: 100%;
     &__image-ibg {
         overflow: hidden;
         opacity: 0.5;
@@ -219,6 +230,9 @@
                     transform: scale(1.05);
                 }
             }
+        }
+        @media (any-hover: none) {
+            opacity: 1;
         }
     }
     &__body {

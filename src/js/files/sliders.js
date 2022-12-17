@@ -17,7 +17,7 @@ function initSliders() {
                 320: {
                     slidesPerView: 1.2,
                     spaceBetween: 10,
-                    autoHeight: true
+                    // autoHeight: true
                 },
                 650: {
                     slidesPerView: 2,
