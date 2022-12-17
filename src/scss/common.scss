@@ -30,7 +30,7 @@
     &__value {
         font-family: $Jakarta;
         font-weight: 700;
-        font-size: rem(36);
+        @include adaptiveValue('font-size', 36, 28);
         line-height: math.div(45, 36);
         span {
             color: $purpleColor;
@@ -38,6 +38,7 @@
         &_big {
             font-size: rem(44);
             line-height: math.div(55, 44);
+            @include adaptiveValue('font-size', 44, 36);
         }
     }
 }
