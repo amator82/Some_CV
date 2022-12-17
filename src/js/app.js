@@ -13,7 +13,7 @@ mtrFunctions.menuInit();
 // mtrFunctions.fullVHfix();
 
 // mtrFunctions.spollers();
-// mtrFunctions.tabs();
+mtrFunctions.tabs();
 
 // mtrFunctions.showMore();
 
