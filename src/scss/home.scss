@@ -520,12 +520,13 @@
         padding-top: rem(80);
     }
     &__title {
-        @include adaptiveValue('margin-bottom', 132, 70);
+        @include adaptiveValue('margin-bottom', 132, 80);
     }
     &__items {
         align-self: stretch;
         display: grid;
-        @include adaptiveValue('gap', 40, 20);
+        @include adaptiveValue('oclumn-gap', 40, 20);
+        row-gap: rem(80);
         grid-template-columns: repeat(auto-fill, minmax(rem(280), 1fr));
     }
     &__item {
@@ -536,16 +537,22 @@
     border-radius: rem(8);
     display: flex;
     flex-direction: column;
-    padding: rem(0) rem(38) rem(24) rem(38);
+    padding-bottom: rem(24);
+    @include adaptiveValue('padding-left', 32, 10);
+    @include adaptiveValue('padding-right', 32, 10);
     &__avatar {
         border-radius: 50%;
         overflow: hidden;
         align-self: center;
         height: rem(96);
         width: rem(96);
-        transform: translate(0px, -50%);
+        margin-top: rem(-48);
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
     }
     &__text {
+        flex: 1 1 auto;
         line-height: math.div(28, 16);
         &:not(:last-child) {
             @include adaptiveValue('margin-bottom', 48, 20);
