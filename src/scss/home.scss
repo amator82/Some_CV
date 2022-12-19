@@ -450,7 +450,7 @@
         align-self: stretch;
         display: grid;
         @include adaptiveValue('gap', 40, 20);
-        grid-template-columns: repeat(auto-fill, minmax(rem(280), rem(361)));
+        grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
     }
     &__item {
     }
