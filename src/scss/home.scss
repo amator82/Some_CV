@@ -583,7 +583,10 @@
     }
     &__body {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        gap: rem(40);
+        @media (min-width: $mobile) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
     &__timeline {
     }
@@ -659,7 +662,7 @@
     }
     &__items {
         display: grid;
-        gap: rem(40);
+        @include adaptiveValue("gap", 40, 20);
     }
     &__item {
     }
