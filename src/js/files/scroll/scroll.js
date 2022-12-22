@@ -1,5 +1,6 @@
-//! Подключение функционала 
+//! Подключение функционала
 import { isMobile, getHash } from '../functions.js'
+import { mtrModules } from '../modules.js'
 //! Модуль прокрутки к блоку
 import { gotoBlock } from './gotoblock.js'
 
@@ -34,7 +35,16 @@ export function pageNavigation() {
                 const offsetTop = gotoLink.dataset.gotoTop
                     ? parseInt(gotoLink.dataset.gotoTop)
                     : 0
-                gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop)
+
+                if (mtrModules.fullpage) {
+                    const fullPageSectionId = +document.querySelector(
+                        `${gotoLinkSelector}[data-fp-section]`
+                    ).dataset.fpId
+                    console.log()
+                    mtrModules.fullpage.switchingSection(fullPageSectionId)
+                } else {
+                    gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop)
+                }
                 e.preventDefault()
             }
         } else if (e.type === 'watcherCallback' && e.detail) {

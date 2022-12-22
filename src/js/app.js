@@ -40,6 +40,8 @@ mtrForms.formSubmit();
 /* Модуль работы с select. */
 // import './libs/select.js'
 
+import './libs/watcher.js'
+
 import './libs/fullpage.js'
 
 /* Модуль работы с ползунком */
@@ -55,7 +57,7 @@ import "./files/sliders.js";
 import * as mtrScroll from './files/scroll/scroll.js'
 
 // Плавная навигация по странице
-// mtrScroll.pageNavigation();
+mtrScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 // flsScroll.headerScroll();
