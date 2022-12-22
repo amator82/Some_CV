@@ -688,3 +688,104 @@
         }
     }
 }
+//!==================================================!//
+.contacts {
+    background-color: #fbfbfb;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: rem(30);
+        padding-top: rem(80);
+    }
+    &__content {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__form {
+    }
+    &__body {
+        @include adaptiveValue('padding-left', 105, 20);
+    }
+    &__list {
+    }
+}
+.form {
+    display: grid;
+    gap: rem(16);
+    &__item {
+        &:last-child {
+            padding-top: rem(22);
+        }
+    }
+    &__input {
+        width: 100%;
+        height: rem(48);
+        border-radius: rem(8);
+        padding: rem(0) rem(24);
+        background-color: #fff;
+        &::placeholder {
+            color: $cinderColor;
+        }
+        &:focus {
+            &::placeholder {
+                color: $mainColor;
+            }
+        }
+    }
+    &__button {
+        background-color: $purpleColor;
+        padding: rem(16);
+        border-radius: rem(8);
+        color: #fff;
+        width: 100%;
+        transition: background-color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #6e65d2;
+            }
+        }
+    }
+}
+textarea.form__input {
+    height: rem(190);
+    resize: vertical;
+    padding: rem(24);
+}
+.list-contacts {
+    display: grid;
+    @include adaptiveValue('gap', 48, 20);
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: rem(24);
+    }
+    &__icon {
+        display: flex;
+        flex: 0 0 rem(56);
+        height: rem(56);
+        justify-content: center;
+        align-items: center;
+        border-radius: rem(16);
+        background-color: #f5f3fe;
+    }
+    &__body {
+    }
+    &__title {
+        font-weight: 500;
+        &:not(:last-child) {
+            margin-bottom: rem(4);
+        }
+    }
+    &__text {
+        font-size: rem(14);
+        line-height: math.div(24, 14);
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $purpleColor;
+            }
+        }
+    }
+}
