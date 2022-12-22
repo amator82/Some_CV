@@ -690,12 +690,13 @@
 }
 //!==================================================!//
 .contacts {
+    flex: 1 1 auto;
     background-color: #fbfbfb;
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-bottom: rem(30);
+        // padding-bottom: rem(30);
         padding-top: rem(80);
     }
     &__content {
@@ -773,7 +774,7 @@
     }
 }
 textarea.form__input {
-    @include adaptiveValue("height", 190, 100);
+    @include adaptiveValue('height', 190, 100);
     resize: vertical;
     padding: rem(24);
 }
