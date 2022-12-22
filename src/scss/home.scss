@@ -584,8 +584,8 @@
     &__body {
         display: grid;
         gap: rem(40);
-        @media (min-width: $mobile) {
-            grid-template-columns: 1fr 1fr;
+        @media (min-width: em(850)) {
+            grid-template-columns: 1fr percent(658, 1200);
         }
     }
     &__timeline {
@@ -662,7 +662,7 @@
     }
     &__items {
         display: grid;
-        @include adaptiveValue("gap", 40, 20);
+        @include adaptiveValue('gap', 40, 20);
     }
     &__item {
     }
