@@ -699,16 +699,32 @@
         padding-top: rem(80);
     }
     &__content {
-        display: grid;
+        display: flex;
         align-items: center;
-        grid-template-columns: 1fr 1fr;
+        @media (max-width: em(850)) {
+            flex-direction: column-reverse;
+        }
     }
     &__form {
+        flex: 0 1 50%;
+        @media (max-width: em(850)) {
+            flex: 0 0 auto;
+            width: 100%;
+        }
     }
     &__body {
+        flex: 0 1 50%;
         @include adaptiveValue('padding-left', 105, 20);
+        @media (max-width: em(850)) {
+            flex: 0 0 auto;
+            width: 100%;
+            padding-left: rem(0);
+        }
     }
     &__list {
+        @media (max-width: em(850)) {
+            margin-bottom: rem(30);
+        }
     }
 }
 .form {
@@ -733,7 +749,7 @@
                 color: $mainColor;
             }
         }
-        &._form-focus{
+        &._form-focus {
             outline: 2px solid $purpleColor;
         }
     }
@@ -757,7 +773,7 @@
     }
 }
 textarea.form__input {
-    height: rem(190);
+    @include adaptiveValue("height", 190, 100);
     resize: vertical;
     padding: rem(24);
 }
