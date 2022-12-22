@@ -1,0 +1,31 @@
+.bottom-page{
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: rem(15);
+        @include adaptiveValue('padding-top', 88, 20);
+        @include adaptiveValue('padding-bottom', 88, 20);
+    }
+    &__social {
+        .social__link {
+            color: $cinderColor;
+            transition: color 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $purpleColor;
+                }
+            }
+        }
+    }
+    &__copy {
+        color: $cinderColor;
+        font-size: rem(14);
+        line-height: math.div(17, 14);
+    }
+}
