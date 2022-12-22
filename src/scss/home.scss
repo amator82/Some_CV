@@ -733,6 +733,9 @@
                 color: $mainColor;
             }
         }
+        &._form-focus{
+            outline: 2px solid $purpleColor;
+        }
     }
     &__button {
         background-color: $purpleColor;
@@ -746,6 +749,11 @@
                 background-color: #6e65d2;
             }
         }
+    }
+    &__error {
+        padding: rem(5) rem(24) rem(0) rem(24);
+        font-size: rem(12);
+        color: red;
     }
 }
 textarea.form__input {

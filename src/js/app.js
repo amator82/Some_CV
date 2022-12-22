@@ -26,10 +26,10 @@ mtrFunctions.tabs();
 import * as mtrForms from './files/forms/forms.js'
 
 /* Работа с полями формы */
-// mtrForms.formFieldsInit({ viewPass: false });
+mtrForms.formFieldsInit({ viewPass: false });
 
 /* Oтправка формы */
-// mtrForms.formSubmit();
+mtrForms.formSubmit();
 
 /* Модуль формы "колличество" */
 // mtrForms.formQuantity();
